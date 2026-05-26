@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaxContru</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="download.png">
+
+</head>
+<body>
+    <!-- <main> indica o conteúdo principal da página, essencial para acessibilidade -->
+    <main class="container">
+        
+        <h1>Faça seu Orçamento</h1>
+        
+        <!-- Este parágrafo instrui o usuário a dar o primeiro clique para ativar o microfone -->
+        <p id="instrucao">Toque ou clique em qualquer lugar da tela para iniciar o atendimento por voz.</p>
+        
+        <!-- Área de Status: Mostra visualmente se o site está Ouvindo, Falando ou Desativado -->
+        <section id="status-container" aria-live="polite">
+            <span id="status-icone" class="aguardando"></span>
+            <p id="status-texto">Aguardando clique para iniciar...</p>
+        </section>
+
+        <!-- Painel do Carrinho: Onde os itens do orçamento vão aparecer conforme o usuário fala -->
+        <section id="painel-orcamento">
+            <h2>Seu Orçamento</h2>
+            <ul id="lista-itens">
+                <!-- O JavaScript vai inserir os produtos aqui dentro na forma de tópicos (<li>) -->
+            </ul>
+            <p id="total">Total: R$ 0,00</p>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

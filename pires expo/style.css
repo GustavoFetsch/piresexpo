@@ -1,0 +1,81 @@
+/* Configuração global para fundo escuro e texto claro (Modo Escuro nativo) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Preto fosco para evitar reflexos e cansaço visual */
+    color: #FFFFFF;           /* Texto branco puro para máximo contraste */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Cor laranja viva para destacar os títulos principais */
+h1, h2 { 
+    color: #FF9800; 
+}
+
+/* Caixa que envolve o indicador de status do microfone */
+#status-container {
+    margin: 30px 0;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #1A1A1A;
+}
+
+/* A bolinha que muda de cor conforme o estado do site */
+#status-icone {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; /* Transforma o quadrado em um círculo perfeito */
+    margin-bottom: 10px;
+}
+
+/* CORES DOS ESTADOS: Extremamente úteis para você debugar o código visualmente */
+.escutando { 
+    background-color: #4CAF50; /* Verde: O microfone está aberto capturando a voz */
+    animation: pulsar 1.2s infinite; /* Faz a bolinha piscar */
+}
+.falando { 
+    background-color: #2196F3; /* Azul: O robô do site está falando as instruções */
+}
+.aguardando { 
+    background-color: #F44336; /* Vermelho: O microfone está desligado e o site em silêncio */
+}
+
+/* Estilização do painel onde o orçamento é listado */
+#painel-orcamento {
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left; /* Alinha o texto do carrinho à esquerda para leitura natural */
+    border: 1px solid #333;
+}
+
+#lista-itens {
+    padding-left: 20px;
+    line-height: 1.8; /* Espaçamento maior entre as linhas para facilitar leitura */
+}
+
+#total {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #FF9800;
+    border-top: 2px solid #333;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+/* Animação que faz a bolinha verde pulsar quando o microfone estiver ouvindo */
+@keyframes pulsar {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
